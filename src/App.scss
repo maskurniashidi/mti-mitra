@@ -1,3 +1,9 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./sass/base/reset";
+@import "./sass/utilities/variables";
+@import "./sass/base/typography";
+
 h1 {
-  color: red;
+  font-size: 30px;
+  font-family: $sans-serif;
 }
