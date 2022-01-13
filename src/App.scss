@@ -1,9 +1,2 @@
-@import "~bootstrap/scss/bootstrap";
-@import "./styles/base/reset";
-@import "./styles/utilities/variables";
-@import "./styles/base/typography";
+@import "./styles/main.scss";
 
-h1 {
-  font-size: 30px;
-  font-family: $sans-serif;
-}
