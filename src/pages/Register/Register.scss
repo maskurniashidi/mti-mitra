@@ -1,0 +1,71 @@
+.register-container {
+  background-image: url("../../assets/images/hotel/background.png");
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color: #1e272e, $alpha: 0.5);
+}
+
+.register-form {
+  position: absolute;
+  z-index: 99;
+  background-color: #fff;
+  width: 375px;
+  height: 90vh;
+  border-radius: 16px;
+  overflow: hidden;
+  .box-header {
+    background-image: url("https://images.unsplash.com/photo-1577415124269-fc1140a69e91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80");
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin-top: -150px;
+    background-position-y: 50px;
+    position: relative;
+  }
+  .box-header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    background-color: rgba($color: #1e272e, $alpha: 0.5);
+  }
+
+  &-logoMti {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    .logo {
+      width: 125px;
+      height: auto;
+    }
+  }
+
+  &-text {
+  }
+
+  &-field {
+    display: flex;
+    flex-direction: column;
+    .label-register {
+      background-color: #fff;
+    }
+
+    .input-register {
+    }
+  }
+}
