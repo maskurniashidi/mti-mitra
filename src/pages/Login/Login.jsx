@@ -25,7 +25,7 @@ function Login() {
           <div className="body-subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
-          <Form>
+          <Form className="body-form">
             <Form.Floating className="mb-3">
               <Form.Control
                 id="floatingEmail"
@@ -34,7 +34,7 @@ function Login() {
               />
               <label htmlFor="floatingEmail">Email address</label>
             </Form.Floating>
-            <Form.Floating>
+            <Form.Floating className="mb-3">
               <Form.Control
                 id="floatingPassword"
                 type="password"
@@ -42,6 +42,15 @@ function Login() {
               />
               <label htmlFor="floatingPassword">Password</label>
             </Form.Floating>
+            <div className="text-forgot mb-3">
+              <small>Forgot password?</small>
+            </div>
+            <Button className="btn-login mb-4" size="lg">
+              Login
+            </Button>
+            <div className="text-register">
+              Not yet a partner? <a href="#">Register here</a>
+            </div>
           </Form>
         </div>
       </div>
