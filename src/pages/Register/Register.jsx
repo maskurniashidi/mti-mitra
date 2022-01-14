@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 //styling
 import "./Register.scss";
@@ -6,6 +7,7 @@ import "./Register.scss";
 //asset
 import HeaderImg from "../../assets/images/hotel/header.png";
 import LogoMti from "../../assets/images/logo.png";
+import reactRouterDom from "react-router-dom";
 
 function Register() {
   return (
@@ -19,14 +21,17 @@ function Register() {
           <div className="text-title">Create New Account</div>
           <div className="text-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
-        <form className="register-form-field">
-          <label htmlFor="email" className="label-register">
-            Email
+        <form className="register-form__field">
+          <label htmlFor="email" className="label__register">
+            <input type="email" className="input__register" required placeholder=" " />
+            <span className="input__label">Email</span>
           </label>
-          <input type="text" className="input-register" />
           <button className="btn-register">Register</button>
           <p>
-            Already have an account? <span>Login now</span>
+            Already have an account?{" "}
+            <Link className="link" to="/login">
+              Login now
+            </Link>
           </p>
         </form>
       </div>

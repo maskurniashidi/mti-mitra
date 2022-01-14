@@ -1,3 +1,16 @@
+//import
+@import "../../styles/main";
+
+//global{
+.link {
+  text-decoration: none;
+  color: $primary-500;
+  &:hover {
+    color: $primary-700;
+  }
+}
+
+//styling
 .register-container {
   background-image: url("../../assets/images/hotel/background.png");
   min-height: 100vh;
@@ -35,7 +48,18 @@
     margin-top: -150px;
     background-position-y: 50px;
     position: relative;
+    animation: 0.75s ease-out 0s 1 slideUpFromDown;
   }
+
+  @keyframes slideUpFromDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
   .box-header::after {
     content: "";
     position: absolute;
@@ -56,16 +80,85 @@
   }
 
   &-text {
-  }
-
-  &-field {
-    display: flex;
-    flex-direction: column;
-    .label-register {
-      background-color: #fff;
+    padding: 0px 5%;
+    margin-top: 1em;
+    .text-title {
+      font-size: 24px;
+      font-weight: $normal;
     }
 
-    .input-register {
+    .text-description {
+      margin-top: 8px;
+      font-size: 16px;
+      font-weight: $normal;
+      color: $secondary-500;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5%;
+    margin-top: 1em;
+    .label__register {
+      position: relative;
+      .input__register {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border: 1px solid $secondary-300;
+        padding: calc(0.5rem * 1.7) 0.5rem;
+        color: $netral-500;
+        background: transparent;
+        border-radius: 4px;
+
+        &:focus,
+        &:not(:placeholder-shown) {
+          outline: none;
+          border: 1px solid $primary-500;
+          & + .input__label {
+            transform: translate(0.25rem, -80%);
+          }
+        }
+      }
+      .input__label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: calc(0.5rem * 0.5) calc(0.5rem * 0.5);
+        margin: calc(0.5rem * 0.75 + 3px) calc(0.5rem * 0.5);
+        background: #fff;
+        white-space: nowrap;
+        transform: translate(0, 0);
+        transform-origin: 0 0;
+        transition: transform 120ms ease-in;
+        font-weight: bold;
+        line-height: 1.2;
+        font-size: 16px;
+        font-weight: $normal;
+      }
+    }
+
+    .btn-register {
+      height: 45.2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      border: none;
+      background-color: $primary-500;
+      color: #fff;
+      font-size: 20px;
+      margin-top: 16px;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 10px;
+
+      span {
+        color: $primary-500;
+      }
     }
   }
 }
