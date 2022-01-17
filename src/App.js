@@ -4,7 +4,7 @@ import { createBrowserHistory } from "history";
 import PrivateRoute from "./routes/PrivateRoute";
 import PublicRoute from "./routes/PublicRoute";
 import { APP_ROUTE } from "./routes";
-import "./App.scss";
+import "./App.css";
 function App() {
   return (
     <Router>

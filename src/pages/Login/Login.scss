@@ -1,106 +1,58 @@
-@import "../../styles/main";
-
-body{
-    background:linear-gradient(
-        rgba(30, 39, 46, 0.5), 
-        rgba(30, 39, 46, 0.5)
-      ), url('../../assets/images/hotel/background.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height:100vh;
+body {
+  background: linear-gradient(rgba(30, 39, 46, 0.5), rgba(30, 39, 46, 0.5)), url("../../assets/images/hotel/background.png");
+  background-size: cover;
 }
 
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .login-form {
+    margin: 5rem 0;
+    background-color: #ffffff;
+    width: 29.5rem;
+    height: 50rem;
+    border-radius: 16px;
+    overflow: hidden;
 
-    .login-form{
-        margin: 4rem 0;
-        background-color: #FFFFFF;
-        width: 27.5rem;
-        height:fit-content;
-        border-radius: 16px;
+    .form-header {
+      .header-background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         overflow: hidden;
+        position: relative;
+        border-bottom-left-radius: 500px;
+        border-bottom-right-radius: 500px;
 
-        .form-header{
-            .header-background{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-                position: relative;
-                border-bottom-left-radius: 500px;
-                border-bottom-right-radius: 500px;
-                height: fit-content;
-
-                img{
-                    flex-shrink: 1;
-                    min-width: 100%;
-                }
-            }
-
-            .header-background:before{
-                content:"";
-                position: absolute;
-                top:0;
-                left:0;
-                height:100%;
-                width:100%;
-                background: rgba(30,39,46,0.4);
-                z-index:999;
-            }
-
-            .header-logo{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 1.5rem;
-            }
+        img {
+          flex-shrink: 0;
+          min-width: 100%;
+          min-height: 100%;
         }
+      }
 
-        .form-body{
-            padding: 2.75rem 2rem;
-
-            .body-title{
-                color: $netral-500;
-                font-size: 1.5em;
-            }
-
-            .body-subtitle{
-                margin-top: 1rem;
-                color: $secondary-500;
-                font-size: 1em;
-                font-weight: $light;
-            }
-
-            .body-form{
-                margin-top: 2rem;
-                
-                .text-forgot{
-                    width:100%;
-                    text-align: right;
-                    font-size: 14px;
-                    font-weight: $normal;
-                }
-
-                .btn-login{
-                    width:100%;
-                    font-size: 1rem;
-                    background-color: $primary-500;
-                    border: 0;
-                }
-
-                .text-register{
-                    width:100%;
-                    text-align: center;
-                    
-                    a{
-                        color:$primary-500;
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
+      .header-background:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+      .header-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+      }
     }
+
+    .form-body {
+      margin-top: 2.75rem;
+      padding: 0 3rem;
+    }
+  }
 }

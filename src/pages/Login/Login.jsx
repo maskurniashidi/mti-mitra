@@ -1,8 +1,7 @@
 import React from "react";
-import { Form, Button, Container } from 'react-bootstrap';
-import Logo from '../../assets/images/logo.png';
-import FormHeader from '../../assets/images/form-header.png';
-
+import { Form, Button, Container } from "react-bootstrap";
+import Logo from "../../assets/images/logo.png";
+import FormHeader from "../../assets/images/form-header.png";
 
 import "./Login.scss";
 
@@ -19,27 +18,15 @@ function Login() {
           </div>
         </div>
         <div className="form-body">
-          <div className="body-title">
-            Welcome Back!
-          </div>
-          <div className="body-subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </div>
-          <Form className="body-form">
+          <div className="body-title">Welcome Back!</div>
+          <div className="body-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          <Form>
             <Form.Floating className="mb-3">
-              <Form.Control
-                id="floatingEmail"
-                type="email"
-                placeholder="name@example.com"
-              />
+              <Form.Control id="floatingEmail" type="email" placeholder="name@example.com" />
               <label htmlFor="floatingEmail">Email address</label>
             </Form.Floating>
-            <Form.Floating className="mb-3">
-              <Form.Control
-                id="floatingPassword"
-                type="password"
-                placeholder="Password"
-              />
+            <Form.Floating>
+              <Form.Control id="floatingPassword" type="password" placeholder="Password" />
               <label htmlFor="floatingPassword">Password</label>
             </Form.Floating>
             <div className="text-forgot mb-3">
