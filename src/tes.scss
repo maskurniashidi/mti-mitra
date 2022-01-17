@@ -104,7 +104,7 @@
       position: relative;
       .input__register {
         box-sizing: border-box;
-        display: block;
+
         width: 100%;
         border: 1px solid $secondary-300;
         padding: calc(0.5rem * 1.7) 0.5rem;
@@ -112,12 +112,12 @@
         background: transparent;
         border-radius: 4px;
 
-        &:focus,
-        &:not(:placeholder-shown) {
+        &:focus {
           outline: none;
           border: 1px solid $primary-500;
           & + .input__label {
             transform: translate(0.25rem, -80%);
+            display: block;
           }
         }
       }
@@ -136,6 +136,7 @@
         line-height: 1.2;
         font-size: 16px;
         font-weight: $normal;
+        pointer-events: none;
       }
     }
 

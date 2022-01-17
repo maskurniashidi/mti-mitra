@@ -2,7 +2,7 @@ import React from "react";
 
 function Home() {
   return (
-    <div>
+    <div className="register-container">
       <h1>Home</h1>
     </div>
   );

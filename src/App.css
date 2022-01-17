@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/proxima/proxima\ nova\ reguler.otf") format("opentype"), url("./assets/fonts/proxima/proxima\ nova\ medium.otf") format("opentype"), url("./assets/fonts/proxima/proxima\ nova\ light.ttf") format("truetype"),
+    url("./assets/fonts/proxima/proxima\ nova\ bold.ttf") format("truetype");
+}
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+  color: #1e272e;
+  line-height: 1.2;
+}
