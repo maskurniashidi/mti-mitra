@@ -25,7 +25,7 @@ function Register() {
             <input type="email" className={style.registerInput} />
             <span className={style.inputLabel}>Email</span>
           </label>
-          <button className={style.btnRegister}>Register</button>
+          <Link className={style.btnRegister} to="/register_Bussiness_Name">Register</Link>
           <p className={style.loginRegister}>
             Already have an account?<span> </span>
             <Link className={style.linkToLogin} to="/login">
