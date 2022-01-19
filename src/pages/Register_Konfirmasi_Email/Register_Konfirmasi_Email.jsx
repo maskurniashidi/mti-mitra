@@ -24,11 +24,8 @@ function Register_Konfirmasi_Email() {
       <div className={style.registerContainer}>
         <div className={style.registerContainer2}>
           <div className={style.registerText}>
-            <div className={style.arrowBackArea}>
-              <Link className={style.arrowBack} to="/register_Password"><ImArrowLeft2/></Link>
-              <div className={style.logoMtiArea}><img src={LogoMti} alt="logo mti" className={style.logoMti} /></div>
-            </div>
-            <div className={style.textTittle}>Langkah terakhir:</div>
+            <div className={style.logoMtiArea}><img src={LogoMti} alt="logo mti" className={style.logoMti} /></div>
+            <div className={style.textTittle}>Langkah terakhir :</div>
             <div className={style.textTittle2}>Konfirmasi pendaftaran anda!</div>
           </div>
           <div className={style.registerLogo}>
@@ -37,10 +34,12 @@ function Register_Konfirmasi_Email() {
           <div className={style.registerMiniText}>
             <div className={style.textDescription}>Konfirmasi pendaftaran anda dengan mengakses link yang telah kami kirim melalui email anda.</div>
           </div>
-          <div className={style.registerResendText}>
-            <div className={style.textResend}>Belum menerima email?</div>
-            <div className={style.textResendButton}>Kirim ulang email</div>
-          </div>
+          <p className={style.loginLogin}>
+          Belum menerima email?<span> </span>
+            <Link className={style.linkToLogin} to="/">
+                Kirim ulang email
+            </Link>
+          </p>
         </div>
       </div>
     </div>

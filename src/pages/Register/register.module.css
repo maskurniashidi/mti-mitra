@@ -111,7 +111,7 @@
 .textDescription {
   margin-top: 8px;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: lighter;
   color: #8f959d;
 }
 
@@ -124,6 +124,8 @@
 
 .registerLabel {
   position: relative;
+  margin: 12px 0px;
+  color: #8f959d;
 }
 
 .registerInput {
@@ -132,15 +134,16 @@
   width: 100%;
   border: 1px solid #d5dbe1;
   padding: calc(0.5rem * 1.7) 0.5rem;
-  color: #1e272e;
   background: transparent;
   border-radius: 4px;
 }
 
-.registerInput:focus,
-.registerInput:not(:placeholder-shown) {
+.registerInput[type="email"]:focus,
+.registerInput[type="text"]:focus,
+.registerInput[type="password"]:focus{
   outline: none;
   border: 1px solid #d82047;
+  color: #1E272E;
 }
 
 .registerInput:focus + .inputLabel {
@@ -166,6 +169,7 @@
 }
 
 .btnRegister {
+  text-decoration: none;
   height: 45.2px;
   display: flex;
   justify-content: center;
@@ -180,5 +184,5 @@
 
 .loginRegister {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 24px;
 }

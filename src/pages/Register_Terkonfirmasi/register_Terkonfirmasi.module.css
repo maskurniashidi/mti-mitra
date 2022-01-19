@@ -81,6 +81,7 @@
 }
 
 .logoMtiArea{
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -141,7 +142,7 @@
   color: #8f959d;
 }
 
-.textResend {
+/* .textResend {
   margin-top: 8px;
   margin-right: 5px;
   font-size: 14px;
@@ -154,7 +155,7 @@
   font-size: 14px;
   font-weight: normal;
   color: #d82047;
-}
+} */
 
 .registerForm {
   display: flex;
@@ -235,3 +236,9 @@
   background-size: cover;
   cursor: pointer;
 }
+
+.loginLogin {
+  text-align: center;
+  margin-top: 24px;
+}
+

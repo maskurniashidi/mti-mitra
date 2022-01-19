@@ -24,10 +24,7 @@ function Register_Terkonfirmasi() {
       <div className={style.registerContainer}>
         <div className={style.registerContainer2}>
           <div className={style.registerText}>
-            <div className={style.arrowBackArea}>
-              <Link className={style.arrowBack} to="/register_Password"><ImArrowLeft2/></Link>
-              <div className={style.logoMtiArea}><img src={LogoMti} alt="logo mti" className={style.logoMti} /></div>
-            </div>
+            <div className={style.logoMtiArea}><img src={LogoMti} alt="logo mti" className={style.logoMti} /></div>
             <div className={style.textTittle}>Sudah terkonfirmasi!</div>
           </div>
           <div className={style.registerLogo}>
@@ -36,10 +33,12 @@ function Register_Terkonfirmasi() {
           <div className={style.registerMiniText}>
             <div className={style.textDescription}>Pendaftaran anda telah terkonfirmasi sebelumnya. Masuk atau daftarkan akun lain anda agar dapat terhubung ke Medical Tourism Indonesia..</div>
           </div>
-          <div className={style.registerResendText}>
-            <div className={style.textResend}>Belum masuk akun?</div>
-            <div className={style.textResendButton}>Masuk disini</div>
-          </div>
+          <p className={style.loginLogin}>
+          Belum masuk akun?<span> </span>
+            <Link className={style.linkToLogin} to="/login">
+                Masuk disini
+            </Link>
+          </p>
         </div>
       </div>
     </div>

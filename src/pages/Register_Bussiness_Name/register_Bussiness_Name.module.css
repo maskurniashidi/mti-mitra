@@ -167,9 +167,11 @@
   font-weight: normal;
   pointer-events: none;
   padding: 5px;
+  color: #8f959d;
 }
 
 .btnRegister {
+  text-decoration: none;
   height: 45.2px;
   display: flex;
   justify-content: center;

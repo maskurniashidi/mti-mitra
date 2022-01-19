@@ -18,8 +18,8 @@ function Register() {
             <img src={LogoMti} alt="logo mti" className={style.logo} />
           </div>
           <div className={style.registerText}>
-            <div className={style.textTittle}>Create New Account</div>
-            <div className={style.textDescription}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div className={style.textTittle}>Buat akun baru</div>
+            <div className={style.textDescription}>Daftarkan hotel anda sebagai mitra dan kami akan membantu anda agar bisa terhubung ke Medical Tourism Indonesia!</div>
           </div>
           <form className={style.registerForm}>
             <label className={style.registerLabel}>
@@ -28,9 +28,9 @@ function Register() {
             </label>
             <Link className={style.btnRegister} to="/register_Bussiness_Name">Register</Link>
             <p className={style.loginRegister}>
-              Already have an account?<span> </span>
+              Sudah menjadi mitra?<span> </span>
               <Link className={style.linkToLogin} to="/login">
-                Login now
+                Masuk sekarang
               </Link>
             </p>
           </form>
