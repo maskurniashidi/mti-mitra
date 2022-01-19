@@ -5,12 +5,16 @@ import { Link } from "react-router-dom";
 //styling
 import style from "./register_Bussiness_Name.module.css";
 
+//assets
+import { ImArrowLeft2 } from 'react-icons/im';
+
 function Register_Bussiness_Name() {
   return (
     <div className={style.register}>
       <div className={style.registerContainer}>
+      <div className={style.registerContainer2}>
         <div className={style.registerText}>
-          <div className={style.textTittle}>*Tombol back*</div>
+          <Link className={style.textTittle} to="/register"><ImArrowLeft2/></Link>
           <div className={style.textTittle}>Masukan Nama Bisnis</div>
         </div>
         <form className={style.registerForm}>
@@ -20,6 +24,7 @@ function Register_Bussiness_Name() {
           </label>
           <Link className={style.btnRegister} to="/register_Password">Selanjutnya</Link>
         </form>
+      </div>
       </div>
     </div>
   );
