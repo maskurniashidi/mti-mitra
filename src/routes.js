@@ -5,6 +5,7 @@ import Register from "./pages/Register/Register";
 import Register_Bussiness_Name from "./pages/Register_Bussiness_Name/Register_Bussiness_Name";
 import Register_Password from "./pages/Register_Password/Register_Password";
 import Register_Konfirmasi_Email from "./pages/Register_Konfirmasi_Email/Register_Konfirmasi_Email";
+import Register_Terkonfirmasi from "./pages/Register_Terkonfirmasi/Register_Terkonfirmasi";
 
 export const APP_ROUTE = [
   {
@@ -47,6 +48,13 @@ export const APP_ROUTE = [
     path: "/register_Konfirmasi_Email",
     exact: true,
     component: Register_Konfirmasi_Email,
+    restricted: true,
+  },,
+  {
+    name: "Register_Terkonfirmasi",
+    path: "/register_Terkonfirmasi",
+    exact: true,
+    component: Register_Terkonfirmasi,
     restricted: true,
   },
   {
