@@ -35,6 +35,26 @@
   overflow: hidden;
 }
 
+.registerContainer2 {
+  position: absolute;
+  z-index: 99;
+  background-color: #fff;
+  width: 375px;
+  height: 90vh;
+  border-radius: 16px;
+  overflow: hidden;
+  animation: 0.75s ease-in 0s 1 fadeIn;
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
 .registerHeader {
   background-image: url("https://images.unsplash.com/photo-1577415124269-fc1140a69e91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80");
   width: 100%;
@@ -86,6 +106,9 @@
 .textTittle {
   font-size: 24px;
   font-weight: normal;
+  color: #1e272e;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .textDescription {
@@ -117,10 +140,10 @@
   border-radius: 4px;
 }
 
-.registerInput:focus,
-.registerInput:not(:placeholder-shown) {
+.registerInput[type= "email"]:focus{
   outline: none;
   border: 1px solid #d82047;
+  padding-left: 2em;
 }
 
 .registerInput:focus + .inputLabel {
@@ -143,6 +166,7 @@
   font-size: 16px;
   font-weight: normal;
   pointer-events: none;
+  padding: 5px;
 }
 
 .btnRegister {
@@ -155,7 +179,7 @@
   background-color: #d82047;
   color: #fff;
   font-size: 20px;
-  margin-top: 16px;
+  margin-top: 30px;
 }
 
 .loginRegister {
