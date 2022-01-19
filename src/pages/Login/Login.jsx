@@ -1,8 +1,10 @@
 import React from "react";
 import { Form, Button, Container } from 'react-bootstrap';
+
 import Logo from '../../assets/images/logo.png';
 import FormHeader from '../../assets/images/form-header.png';
-
+import { ReactComponent as IconMail } from '../../assets/icons/mail.svg';
+import { ReactComponent as IconLock } from '../../assets/icons/lock.svg';
 
 import "./Login.scss";
 
@@ -26,15 +28,21 @@ function Login() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </div>
           <Form className="body-form">
-            <Form.Floating className="mb-3">
+            <Form.Floating className="inner-addon left-addon mb-3">
+              {/* <div className="icon-placeholder">
+                <IconMail className="icon" />
+              </div> */}
               <Form.Control
                 id="floatingEmail"
                 type="email"
                 placeholder="name@example.com"
               />
-              <label htmlFor="floatingEmail">Email address</label>
+              <label htmlFor="floatingEmail">Email</label>
             </Form.Floating>
-            <Form.Floating className="mb-3">
+            <Form.Floating className="inner-addon left-addon mb-3">
+              {/* <div className="icon-placeholder">
+                <IconLock className="icon" />
+              </div> */}
               <Form.Control
                 id="floatingPassword"
                 type="password"

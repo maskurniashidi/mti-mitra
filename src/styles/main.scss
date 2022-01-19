@@ -2,3 +2,43 @@
 @import "./base/reset";
 @import "./utilities/variables";
 @import "./base/typography";
+
+// .icon {
+//     --icon-size: 1.5rem;
+//     height: var(--icon-size);
+//     width: var(--icon-size);
+// }
+  
+// .inner-addon { 
+//     position: relative; 
+// }
+  
+// .inner-addon .icon-placeholder {
+//     position: absolute;
+//     left: 0;
+//     height: 100%;
+//     width: 3.25rem;
+//     pointer-events: none;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+  
+//     .icon{
+//       color: #878787;
+//     }
+// }
+
+// .left-addon .glyphicon  { left:  0px;}
+// .right-addon .glyphicon { right: 0px;}
+
+// .left-addon{ 
+//   input, select  {
+//     padding-left:  3.25rem !important; 
+//   }
+// }
+
+// .right-addon{ 
+//   input, select  {
+//     padding-right:  3.25rem !important; 
+//   }
+// }

@@ -109,25 +109,27 @@
         border: 1px solid $secondary-300;
         padding: calc(0.5rem * 1.7) 0.5rem;
         color: $netral-500;
-        background: transparent;
+        background: pink;
         border-radius: 4px;
+        z-index: 91;
 
         &:focus,
         &:not(:placeholder-shown) {
           outline: none;
           border: 1px solid $primary-500;
           & + .input__label {
+            background: #fff;
             transform: translate(0.25rem, -80%);
           }
         }
       }
       .input__label {
+        z-index: 90;
         position: absolute;
         left: 0;
         top: 0;
         padding: calc(0.5rem * 0.5) calc(0.5rem * 0.5);
         margin: calc(0.5rem * 0.75 + 3px) calc(0.5rem * 0.5);
-        background: #fff;
         white-space: nowrap;
         transform: translate(0, 0);
         transform-origin: 0 0;
@@ -136,6 +138,11 @@
         line-height: 1.2;
         font-size: 16px;
         font-weight: $normal;
+        &:hover{
+          background: #fff;
+            transform: translate(0.25rem, -80%);
+            
+        }
       }
     }
 

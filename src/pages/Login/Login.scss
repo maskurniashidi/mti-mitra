@@ -33,7 +33,7 @@ body{
                 border-bottom-left-radius: 500px;
                 border-bottom-right-radius: 500px;
                 height: fit-content;
-
+                animation: 0.75s ease-out 0s 1 slideUpFromDown;
                 img{
                     flex-shrink: 1;
                     min-width: 100%;
@@ -77,6 +77,39 @@ body{
             .body-form{
                 margin-top: 2rem;
                 
+                .form-floating{
+                    .form-control{
+                        height: calc(3rem + 2px);
+                    }
+
+                    .form-control:focus{
+                        padding: .75rem;
+                        padding-top: 1.15rem;
+                        border-color: #d82047;
+                        box-shadow: none;
+                    }
+
+                    .form-control:not(:placeholder-shown):not(:focus){
+                        padding-top: 1.8rem;
+                    }
+
+                    .form-control:focus ~ label{
+                        opacity: 1;
+                        transform: scale(0.75) translateY(-0.5rem) translateX(0.78rem);
+                        background: white;
+                        padding: 0 .25rem;
+                        height: fit-content;
+                    }
+                    
+                    .form-control:not(:placeholder-shown):not(:focus) ~ label{
+                        transform: scale(0.75) translateY(-0.5rem) translateX(0.275rem);
+                    }
+                    
+                    label{
+                        color: $secondary-500;
+                    }
+                }
+
                 .text-forgot{
                     width:100%;
                     text-align: right;
