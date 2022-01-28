@@ -1,0 +1,12 @@
+@import '../../styles/utilities/variables';
+
+.navbar{
+    box-shadow: 0 8px 16px rgba(0,0,0,.04);
+    padding: .75rem 0!important;
+    height:5.25rem;
+    background-color: $white!important;
+    
+    .navbar-brand img {
+        height:3.25rem;
+    }
+}

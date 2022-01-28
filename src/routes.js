@@ -6,6 +6,7 @@ import Register_Bussiness_Name from "./pages/Register_Bussiness_Name/Register_Bu
 import Register_Password from "./pages/Register_Password/Register_Password";
 import Register_Konfirmasi_Email from "./pages/Register_Konfirmasi_Email/Register_Konfirmasi_Email";
 import Register_Terkonfirmasi from "./pages/Register_Terkonfirmasi/Register_Terkonfirmasi";
+import HotelInformasiUmum from "./pages/Hotel/Informasi_Umum";
 
 export const APP_ROUTE = [
   {
@@ -63,5 +64,12 @@ export const APP_ROUTE = [
     exact: true,
     component: Dashboard,
     private: true,
+  },
+  {
+    name: "HotelInformasiUmum",
+    path: "/hotel/1",
+    exact: true,
+    component: HotelInformasiUmum,
+    restricted: true,
   },
 ];
