@@ -8,6 +8,7 @@ import Register_Konfirmasi_Email from "./pages/Register_Konfirmasi_Email/Registe
 import Register_Terkonfirmasi from "./pages/Register_Terkonfirmasi/Register_Terkonfirmasi";
 import HotelInformasiUmum from "./pages/Hotel/Informasi_Umum";
 import HotelDataTambahan from "./pages/Hotel/Data_Tambahan";
+import HotelInformasiKamar from "./pages/Hotel/Informasi_Kamar";
 
 export const APP_ROUTE = [
   {
@@ -78,6 +79,13 @@ export const APP_ROUTE = [
     path: "/hotel/2",
     exact: true,
     component: HotelDataTambahan,
+    restricted: true,
+  },
+  {
+    name: "HotelInformasiKamar",
+    path: "/hotel/3",
+    exact: true,
+    component: HotelInformasiKamar,
     restricted: true,
   },
 ];
