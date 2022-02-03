@@ -1,14 +1,16 @@
-import React from "react";
+import {React, useRef} from "react";
 import Navbar from "../../../components/Navbar/Navbar";
 import Sidebar from "../../../components/Sidebar/Sidebar";
 import {Container, Card, Button, Form, Col, Row} from "react-bootstrap";
 import { Wrapper, Status } from "@googlemaps/react-wrapper";
 import { Link } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import InputLabel from "../../../components/Form/Input/InputLabel/InputLabel";
 
 import "./index.scss";
 
 function Index() {
+
   return (
     <>
       <Navbar/>
@@ -57,7 +59,7 @@ function Index() {
                         </Form.Group>
                         <Form.Group>
                           <Form.Label>Maksimal Penghuni Kamar</Form.Label>
-                          <Form.Control type="text" placeholder="Masukkan Maksimal Penghuni Kamar" />
+                          <InputLabel placeholder="Masukkan Maksimal Penghuni Kamar" type="text" label="Orang" label-type="suffix"/>
                         </Form.Group>
                       </Col>
                     </Form.Group>
@@ -68,11 +70,11 @@ function Index() {
                       <Col sm={8}>
                         <Form.Group className="mb-3">
                           <Form.Label>Maksimal Tempat Tidur Tambahan</Form.Label>
-                          <Form.Control type="text" placeholder="Masukkan Maksimal Tempat Tidur Tambahan" />
+                          <InputLabel placeholder="Masukkan Maksimal Tempat Tidur Tambahan" type="text" label="Jenis" label-type="suffix"/>
                         </Form.Group>
                         <Form.Group>
                           <Form.Label>Harga Tempat Tidur Tambahan</Form.Label>
-                          <Form.Control type="text" placeholder="Masukkan Harga Tempat Tidur Tambahan" />
+                          <InputLabel placeholder="Masukkan Harga Tempat Tidur Tambahan" type="text" label="IDR" label-type="prefix"/>
                         </Form.Group>
                       </Col>
                     </Form.Group>
@@ -83,11 +85,11 @@ function Index() {
                       <Col sm={8}>
                         <Form.Group className="mb-3">
                           <Form.Label>Lebar</Form.Label>
-                          <Form.Control type="text" placeholder="Masukkan Lebar Kamar" />
+                          <InputLabel placeholder="Masukkan Lebar Kamar" type="text" label="Meter" label-type="suffix"/>
                         </Form.Group>
                         <Form.Group>
                           <Form.Label>Panjang</Form.Label>
-                          <Form.Control type="text" placeholder="Masukkan Panjang Kamar" />
+                          <InputLabel placeholder="Masukkan Panjang Kamar" type="text" label="Meter" label-type="suffix"/>
                         </Form.Group>
                       </Col>
                     </Form.Group>
@@ -96,7 +98,7 @@ function Index() {
                         Tarif Kamar
                       </Form.Label>
                       <Col sm={8}>
-                        <Form.Control type="text" name="name" placeholder="Masukkan Tarif Kamar" />
+                        <InputLabel placeholder="Masukkan Tarif Kamar" type="text" label="IDR" label-type="prefix"/>
                       </Col>
                     </Form.Group>
                     <Form.Group as={Row} className="mb-4">
@@ -127,7 +129,7 @@ function Index() {
                       Jumlah Kamar Untuk Tipe Ini
                       </Form.Label>
                       <Col sm={8}>
-                        <Form.Control type="text" name="name" placeholder="Masukkan Jumlah Kamar Untuk Tipe Ini" />
+                        <InputLabel placeholder="Masukkan Jumlah Kamar Untuk Tipe Ini" type="text" label="Kamar" label-type="suffix"/>
                       </Col>
                     </Form.Group>        
                     <Form.Group as={Row} className="mt-5 mb-2">
@@ -139,11 +141,11 @@ function Index() {
                 </Card.Body>
               </Card>
               <div className="page-nav">
-                <Link className="nav-prev">
+                <Link to="#" className="nav-prev">
                   <FaArrowLeft/>
                   Halaman Sebelumnya
                 </Link>
-                <Link className="nav-next">
+                <Link to="#" className="nav-next">
                   Halaman Selanjutnya
                   <FaArrowRight/>
                 </Link>

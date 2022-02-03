@@ -1,0 +1,36 @@
+@import '../../../../styles/utilities/variables';
+
+.input-label{
+    position: relative;
+
+    .label-input{
+        position: relative;
+    }
+
+    .badge-label{
+        background-color: $primary-500;
+        color: $white;
+        padding: .125rem 1rem;
+        border-radius: .5rem;
+        text-align: center;
+        width: 5rem;
+    }
+
+    .label-prefix, .label-suffix{
+        position: absolute;
+        top: 0px;
+        height: 100%;
+        padding: 0 .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .label-prefix{
+        left: 0;
+    } 
+
+    .label-suffix{
+        right: 0;
+    } 
+}
