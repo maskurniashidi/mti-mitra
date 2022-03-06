@@ -1,0 +1,188 @@
+/* Global */
+.linkToLogin {
+  text-decoration: none;
+  color: #d82047;
+  font-weight: 500;
+}
+
+/* register */
+.register {
+  background-image: url("../../../assets/images/hotel/background.png");
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(30, 39, 46, 0.5);
+}
+
+.registerContainer {
+  position: absolute;
+  z-index: 99;
+  background-color: #fff;
+  width: 375px;
+  height: 90vh;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.registerContainer2 {
+  position: absolute;
+  z-index: 99;
+  background-color: #fff;
+  width: 375px;
+  height: 90vh;
+  border-radius: 16px;
+  overflow: hidden;
+  animation: 0.75s ease-in 0s 1 fadeIn;
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.registerHeader {
+  background-image: url("https://images.unsplash.com/photo-1577415124269-fc1140a69e91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80");
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-top: -150px;
+  background-position-y: 50px;
+  position: relative;
+  animation: 0.75s ease-out 0s 1 slideUpFromDown;
+}
+
+@keyframes slideUpFromDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.registerHeader::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  background-color: rgba(30, 39, 46, 0.5);
+}
+
+.registerLogo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.logo {
+  width: 125px;
+  height: auto;
+}
+
+.registerText {
+  padding: 0px 5%;
+  margin-top: 1em;
+}
+
+.textTittle {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.textDescription {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #8f959d;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 5%;
+  margin-top: 1em;
+}
+
+.registerLabel {
+  position: relative;
+  margin: 12px 0px;
+  color: #8f959d;
+}
+
+.registerInput {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 1px solid #d5dbe1;
+  padding: calc(0.5rem * 1.7) 0.5rem;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.registerInput[type="email"]:focus,
+.registerInput[type="text"]:focus,
+.registerInput[type="password"]:focus{
+  outline: none;
+  border: 1px solid #d82047;
+  color: #1E272E;
+}
+
+.registerInput:focus + .inputLabel {
+  transform: translate(0.25rem, -80%);
+}
+
+.inputLabel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: calc(0.5rem * 0.5) calc(0.5rem * 0.5);
+  margin: calc(0.5rem * 0.75 + 3px) calc(0.5rem * 0.5);
+  background: #fff;
+  white-space: nowrap;
+  transform: translate(0, 0);
+  transform-origin: 0 0;
+  transition: transform 120ms ease-in;
+  font-weight: bold;
+  line-height: 1.2;
+  font-size: 16px;
+  font-weight: normal;
+  pointer-events: none;
+}
+
+.btnRegister {
+  text-decoration: none;
+  height: 45.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+  background-color: #d82047;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+.loginRegister {
+  text-align: center;
+  margin-top: 24px;
+}

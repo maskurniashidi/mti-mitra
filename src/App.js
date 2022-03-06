@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import PrivateRoute from "./routes/PrivateRoute";
-import PublicRoute from "./routes/PublicRoute";
-import { APP_ROUTE } from "./routes";
+import PrivateRoute from "./routes/components/PrivateRoute";
+import PublicRoute from "./routes/components/PublicRoute";
+import { APP_ROUTE } from "./routes/routes";
 import "./App.scss";
-function App() {
+
+const App = () => {
   return (
     <Router>
       <Switch>
