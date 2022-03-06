@@ -1,0 +1,60 @@
+@import '../../../styles/utilities/variables';
+
+main.main{
+    background-color: $secondary-100;
+    padding-top:5.25rem;
+    min-height: 100vh;
+    height:fit-content;
+}
+
+.content-wrapper{
+    margin-top: 2.75rem;
+    margin-left:17.25rem;
+    padding: 0 3rem;
+
+    .content-header{
+        padding: .75rem 0;
+
+        .header-title{
+            margin-bottom: 0;
+        }
+    }
+
+    .content-body{
+        padding: .75rem 0;
+
+        .card{
+            border: 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,.12);
+
+            .card-header{
+                padding: .75rem 1rem;
+                background-color: $header-color;
+                color:$netral-500;
+                border: 0;
+            }
+
+            .card-body{
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        .page-nav{
+            padding: 1.75rem .5rem;
+            display: flex;
+            justify-content: space-between;
+
+            a{
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: $netral-500;
+
+                svg{
+                    margin-left: 1rem;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}
