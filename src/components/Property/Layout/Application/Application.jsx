@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, createElement} from "react";
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
 import {Container} from "react-bootstrap";
@@ -18,7 +18,7 @@ const Application = ({property, content}) => {
     }
        
     useEffect(() => {  
-        setActiveContent(getContentById(content, content.defaultPage).content);
+        setActiveContent(React.createElement(getContentById(content, content.defaultPage).content));
         setContentTitle(getContentById(content, content.defaultPage).name);
     }, [content]);
 
