@@ -1,0 +1,84 @@
+.contact-form{
+    border-radius: .5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,.25);
+    overflow: hidden;
+    height: 33.5rem;
+
+    .contact-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 2rem;
+
+        .content-title{
+            margin-bottom: 2.5rem;
+        }
+
+        .content-action{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            button{
+                padding: .75rem 5rem;
+                width: 17.5rem;
+                margin-bottom: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .button-container{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    
+                    svg{
+                        width: 1.25rem;
+                        height: 1.25rem;
+                        margin-right: .5rem;
+                    }
+                }
+            }
+
+            button:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        .content-description{
+            margin-top: 2rem;
+            text-align: center;
+            font-size: .95rem;
+        }
+    }
+    
+    .contact-header{
+        display: flex;
+        padding: .75rem 1rem;
+        background-color: #EAEDF0;
+        align-items: center;
+        justify-content: space-between;
+
+        .dropdown-toggle{
+            color: inherit;
+            cursor: pointer;
+        }
+        
+        .show > .dropdown-toggle, .dropdown-toggle:hover{
+            color: #666;
+        }
+
+        .dropdown-toggle::after{
+            content: none;
+        }
+    }
+
+    .contact-body{
+        padding: 1rem;
+    }
+}
