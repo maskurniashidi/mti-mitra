@@ -1,0 +1,25 @@
+@import '../../../../styles/utilities/variables';
+
+.input-switch{
+    position: relative;
+
+    .form-control{
+        position: relative;
+        padding-right: 4rem;
+    }
+
+    .form-control:disabled, .form-control[readonly]{
+        background-color: initial!important;
+    }
+
+    .switch-toggle{
+        position: absolute;
+        top: 0px;
+        right: 0;
+        height: 100%;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
