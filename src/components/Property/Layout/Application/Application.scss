@@ -1,97 +1,155 @@
-@import '../../../../styles/utilities/variables';
+@import "../../../../styles/utilities/variables";
 
-main.main{
-    background-color: $secondary-100;
-    padding-top:5.25rem;
-    min-height: 100vh;
-    height:fit-content;
+main.main {
+  background-color: $secondary-100;
+  padding-top: 5.25rem;
+  min-height: 100vh;
+  height: fit-content;
 }
 
-.content-wrapper{
-    margin-top: 2.75rem;
-    margin-left:17.25rem;
-    padding: 0 3rem;
+.content-wrapper {
+  margin-top: 2.75rem;
+  margin-left: 17.25rem;
+  padding: 0 3rem;
 
-    .content-header{
-        padding: .75rem 0;
+  .content-header {
+    padding: 0.75rem 0;
 
-        .header-title{
-            margin-bottom: 0;
-        }
+    .header-title {
+      margin-bottom: 0;
     }
+  }
 
-    .content-body{
-        padding: .75rem 0;
+  .content-body {
+    padding: 0.75rem 0;
 
-        .card{
-            border: 0;
-            box-shadow: 0 1px 4px rgba(0,0,0,.12);
+    .card {
+      border: 0;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 
-            .card-header{
-                padding: .75rem 1rem;
-                background-color: $header-color;
-                color:$netral-500;
-                border: 0;
-            }
+      .card-header {
+        padding: 0.75rem 1rem;
+        background-color: $header-color;
+        color: $netral-500;
+        border: 0;
+      }
 
-            .card-body{
-                padding: 1.25rem 1rem;
+      .card-body {
+        padding: 1.25rem 1rem;
 
-                .content-galery{
-
-                    .galery-photo{
-                        border-radius: 1rem;
-                        height: 13rem;
-                        width: 13rem;
-                        overflow: hidden;
-                        display:flex;
-                        justify-content: center;
-                        align-items: center;
-
-                        img{
-                            min-width: 100%;
-                            min-height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-
-                    .galery-photo.add{
-                        border: .125rem $secondary-300 dashed;
-                        flex-direction: column;
-                        position: relative;
-
-                        svg{
-                            color:$primary-500;
-                            font-size:2rem;
-                            position: absolute;
-                        }
-
-                        small{
-                            position: absolute;
-                            bottom: 3.5rem;
-                            color: $netral-500;
-                        }
-                    }
-                }
-            }
-        }
-
-        .page-nav{
-            padding: 1.75rem .5rem;
+        .day-open-container {
+          .select-day {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            margin: -0.5rem;
+            max-height: 20rem;
+            flex-wrap: wrap;
 
-            a{
-                display: flex;
-                align-items: center;
-                text-decoration: none;
-                color: $netral-500;
-
-                svg{
-                    margin-left: 1rem;
-                    margin-right: 1rem;
-                }
+            .styled-check-container {
+              margin: 0.5rem;
             }
+
+            .day-check {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+
+              .hours-input {
+                margin-top: 0;
+              }
+
+              .styled-check-container {
+                margin-right: 1rem;
+              }
+            }
+          }
+
+          .select-day.select-hours {
+            flex-direction: row;
+
+            .day-check {
+              width: unset;
+
+              .styled-check-container {
+                margin: 0.5rem;
+              }
+            }
+          }
+
+          .hours-input {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: -0.5rem;
+            margin-right: -0.5rem;
+            margin-top: 1rem;
+
+            .form-control {
+              width: 5rem;
+              height: 1.875rem;
+              margin-left: 0.5rem;
+              margin-right: 0.5rem;
+              padding: 0.125rem 0.325rem;
+              font-size: small;
+              text-align: center;
+            }
+          }
         }
+
+        .content-galery {
+          .galery-photo {
+            border-radius: 1rem;
+            height: 13rem;
+            width: 13rem;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              min-width: 100%;
+              min-height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .galery-photo.add {
+            border: 0.125rem $secondary-300 dashed;
+            flex-direction: column;
+            position: relative;
+
+            svg {
+              color: $primary-500;
+              font-size: 2rem;
+              position: absolute;
+            }
+
+            small {
+              position: absolute;
+              bottom: 3.5rem;
+              color: $netral-500;
+            }
+          }
+        }
+      }
     }
+
+    .page-nav {
+      padding: 1.75rem 0.5rem;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $netral-500;
+
+        svg {
+          margin-left: 1rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
 }
