@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from "react";
-import {Card, Button, Form, Col, Row} from "react-bootstrap";
+import React from "react";
+import { Card, Button, Form, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+
+import InputSelect from "../../../../../components/Form/Input/InputSelect/InputSelect";
 
 const DataTambahan = () => {
-
   return (
     <Card>
       <Card.Header as="h5">Data Tambahan</Card.Header>
@@ -23,11 +23,7 @@ const DataTambahan = () => {
               Jam Buka
             </Form.Label>
             <Col sm={8}>
-              <Form.Check
-                type="radio"
-                label="Buka 24 Jam"
-                name="open_hours"
-              />
+              <Form.Check type="radio" label="Buka 24 Jam" name="open_hours" />
               <Form.Check
                 type="radio"
                 label="Tidak Buka 24 Jam"
@@ -40,7 +36,11 @@ const DataTambahan = () => {
               Jarak ke Pusat Kota
             </Form.Label>
             <Col sm={8}>
-              <Form.Control type="text" name="distance" placeholder="Masukkan Jarak ke Pusat Kota" />
+              <InputSelect
+                type="text"
+                name="distance"
+                placeholder="Masukkan Jarak ke Pusat Kota"
+              />
             </Col>
           </Form.Group>
           <Form.Group as={Row} className="mb-4">
@@ -48,18 +48,28 @@ const DataTambahan = () => {
               Jumlah Lantai
             </Form.Label>
             <Col sm={8}>
-              <Form.Control type="text" name="floor" placeholder="Masukkan Jumlah Lantai"/>
+              <Form.Control
+                type="text"
+                name="floor"
+                placeholder="Masukkan Jumlah Lantai"
+              />
             </Col>
-          </Form.Group>  
+          </Form.Group>
           <Form.Group as={Row} className="mb-4">
             <Form.Label column sm={4}>
-              Biaya Sarapan Tambahan 
-              <small style={{display:'block'}}>(Tidak Termasuk Tarif Kamar)</small>
+              Biaya Sarapan Tambahan
+              <small style={{ display: "block" }}>
+                (Tidak Termasuk Tarif Kamar)
+              </small>
             </Form.Label>
             <Col sm={8}>
-              <Form.Control type="text" name="floor" placeholder="Masukkan Biaya Sarapan Tambahan"/>
+              <Form.Control
+                type="text"
+                name="floor"
+                placeholder="Masukkan Biaya Sarapan Tambahan"
+              />
             </Col>
-          </Form.Group>     
+          </Form.Group>
           <Form.Group as={Row} className="mb-4">
             <Form.Label column sm={4}>
               Kebijakan Pembatalan Mitra
@@ -72,16 +82,18 @@ const DataTambahan = () => {
                 <option value="3">Three</option>
               </Form.Select>
             </Col>
-          </Form.Group>        
+          </Form.Group>
           <Form.Group as={Row} className="mt-5 mb-2">
             <Col sm={12}>
-              <Button type="submit" size="md" className="w-100">Simpan</Button>
+              <Button type="submit" size="md" className="w-100">
+                Simpan
+              </Button>
             </Col>
           </Form.Group>
         </Form>
       </Card.Body>
     </Card>
   );
-}
+};
 
 export default DataTambahan;
