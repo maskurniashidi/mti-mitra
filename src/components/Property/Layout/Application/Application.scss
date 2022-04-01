@@ -37,6 +37,14 @@ main.main {
       .card-body {
         padding: 1.25rem 1rem;
 
+        .contract {
+          border: 1px solid #ced4da;
+          border-radius: 0.25rem;
+          padding: 1rem;
+          max-height: 25rem;
+          overflow-y: scroll;
+        }
+
         .day-open-container {
           .select-day {
             display: flex;

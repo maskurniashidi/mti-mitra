@@ -8,14 +8,11 @@ const InputSwitch = (props) => {
   const { callback, ...passedProps } = props;
 
   const [checked, setChecked] = useState(false);
+
   const handleChange = (nextChecked) => {
     setChecked(nextChecked);
     callback && callback(nextChecked);
   };
-
-  useEffect(() => {
-    console.log(checked);
-  }, [checked]);
 
   return (
     <div className="input-switch">
