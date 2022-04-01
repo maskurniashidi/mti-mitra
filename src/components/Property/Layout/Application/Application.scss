@@ -37,6 +37,24 @@ main.main {
       .card-body {
         padding: 1.25rem 1rem;
 
+        .info-contact {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+
+          svg.icon {
+            color: $primary-500;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 1rem;
+          }
+
+          .contact {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+
         .contract {
           border: 1px solid #ced4da;
           border-radius: 0.25rem;
