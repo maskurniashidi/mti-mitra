@@ -112,7 +112,24 @@ const InformasiMitra = () => {
                 stefanusirgy2202@gmail.com
               </Form.Label>
             </Form.Group>
-            <Form.Group as={Row} className="mt-5 mb-1">
+            <Form.Group as={Row} className="mb-1">
+              <Form.Label column sm={4}>
+                Jam Buka
+              </Form.Label>
+              <Col sm={8}>
+                {["Senin", "Selasa", "Rabu", "Kamis", "Jum'at"].map((data) => (
+                  <Form.Group as={Row}>
+                    <Form.Label column sm={2}>
+                      {data}
+                    </Form.Label>
+                    <Form.Label column sm={10}>
+                      08.00 - 20.00
+                    </Form.Label>
+                  </Form.Group>
+                ))}
+              </Col>
+            </Form.Group>
+            <Form.Group as={Row} className="mt-4 mb-1">
               <Col sm={12}>
                 <Button type="submit" size="md" className="w-100">
                   Simpan
