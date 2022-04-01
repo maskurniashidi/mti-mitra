@@ -1,0 +1,53 @@
+@import "../../../../../../../styles/utilities/variables";
+
+.expand-menu {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6c757d;
+  background-color: white;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  .expand-header {
+    display: flex;
+    justify-content: space-between;
+
+    .header-action {
+      cursor: pointer;
+      color: $primary-500;
+
+      svg {
+        margin-left: 0.75rem;
+      }
+    }
+  }
+
+  .expand-body {
+    padding: 1rem 0;
+
+    .row {
+      justify-content: space-between;
+      .selection-left,
+      .selection-right {
+        display: flex;
+        justify-content: center;
+        width: unset;
+
+        .selection-header {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.expand-menu.active {
+  color: #212529;
+}
