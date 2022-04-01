@@ -1,12 +1,73 @@
-@import '../../../../styles/utilities/variables';
+@import "../../../../styles/utilities/variables";
 
-.navbar{
-    box-shadow: 0 8px 16px rgba(0,0,0,.04);
-    padding: .75rem 0!important;
-    height:5.25rem;
-    background-color: $white!important;
-    
-    .navbar-brand img {
-        height:3.25rem;
+.navbar {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+  padding: 0.75rem 0 !important;
+  height: 5.25rem;
+  background-color: $white !important;
+
+  .navbar-brand img {
+    height: 3.25rem;
+  }
+
+  .navbar-nav {
+    .dropdown-menu {
+      left: unset;
+      right: 0;
     }
+
+    .nav-dropdown {
+      display: flex;
+      align-items: center;
+
+      .nav-avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        background-color: $secondary-300;
+        color: $secondary-700;
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: 0.5rem;
+        margin-right: 0.675rem;
+      }
+
+      .nav-profile {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+
+        .property-name {
+          font-size: medium;
+          color: $netral-500;
+        }
+
+        .account {
+          font-size: smaller;
+          color: $secondary-500;
+          font-weight: 300;
+        }
+      }
+
+      .dropdown-toggle {
+        color: inherit;
+        cursor: pointer;
+
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+
+      .show > .dropdown-toggle,
+      .dropdown-toggle:hover {
+        color: #666;
+      }
+
+      .dropdown-toggle::after {
+        content: none;
+      }
+    }
+  }
 }

@@ -1,7 +1,14 @@
 import React from "react";
-import {Navbar as BootstrapNavbar, Container, Nav, NavDropdown} from "react-bootstrap";
-import BrandLogo from "../../../../assets/images/logo.png";
+import {
+  Navbar as BootstrapNavbar,
+  Container,
+  Nav,
+  Dropdown,
+} from "react-bootstrap";
+import { IoChevronDownOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
+import BrandLogo from "../../../../assets/images/logo.png";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -13,17 +20,27 @@ const Navbar = () => {
         </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
         <Nav className="pull-right">
-          <NavDropdown title="Hotel Himalaya" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-          </NavDropdown>
+          <Dropdown>
+            <div className="nav-dropdown">
+              <div className="nav-avatar">HH</div>
+              <div className="nav-profile">
+                <span className="property-name">Hotel Himalaya</span>
+                <span className="account">stefanusirgy2202@gmail.com</span>
+              </div>
+              <Dropdown.Toggle as="a" id="dropdown-basic">
+                <IoChevronDownOutline />
+              </Dropdown.Toggle>
+            </div>
+            <Dropdown.Menu>
+              <Dropdown.Item as={Link} to="/login">
+                Logout
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Nav>
       </Container>
     </BootstrapNavbar>
   );
-}
+};
 
 export default Navbar;
