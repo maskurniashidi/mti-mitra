@@ -1,61 +1,86 @@
-//dependency
-import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Form, Button, Container } from "react-bootstrap";
+import { Link, useHistory } from "react-router-dom";
+import { HiEye, HiEyeOff } from "react-icons/hi";
 
-//styling
-import style from "./login.module.css";
+import Logo from "../../../assets/images/logo.png";
+import FormHeader from "../../../assets/images/form-header.png";
 
-//asset
-import LogoMti from "../../../assets/images/logo.png";
-import unhide from "../../../assets/images/eye.png";
-import hide from "../../../assets/images/eye-slash.png";
+import "./Login.scss";
 
 const Login = () => {
-
-  const [pwd, setPwd] = useState('');
-  const [isRevealPwd, setIsRevealPwd] = useState(false);
+  const [reveal, setReveal] = useState(false);
+  const history = useHistory();
 
   return (
-    <div className={style.login}>
-      <div className={style.loginContainer}>
-        <div className={style.loginHeader}></div>
-        <div className={style.loginLogo}>
-          <img src={LogoMti} alt="logo mti" className={style.logo} />
-        </div>
-        <div className={style.loginText}>
-          <div className={style.textTittle}>Selamat datang !</div>
-          <div className={style.textDescription}>Masuk untuk mengelola informasi hotel anda mulai dari memeriksa reservasi hingga mengelola ketersediaan kamar!</div>
-        </div>
-        <form className={style.loginForm}>
-          <label className={style.loginLabel}>
-            <input type="email" className={style.loginInput} />
-            <span className={style.inputLabel}>Email</span>
-          </label>
-          <label className={style.loginLabel}>
-            <input className={style.loginInput} 
-              type={isRevealPwd ? "text" : "password"}
-              value={pwd}
-              onChange={e => setPwd(e.target.value)}/>
-            <span className={style.inputLabel}>Password</span>
-            <div className={style.hidepass}>
-              <img
-                  title={isRevealPwd ? "Hide password" : "Show password"}
-                  src={isRevealPwd ? hide : unhide}
-                  onClick={() => setIsRevealPwd(prevState => !prevState)}
-              />
+    <div className="login-wrapper">
+      <Container>
+        <div className="login-form">
+          <div className="form-header">
+            <div className="header-background">
+              <img src={FormHeader} alt="header" />
             </div>
-          </label>
-          <Link className={style.btnLogin} to="/dashboard">Login</Link>
-          <p className={style.loginLogin}>
-          Belum menjadi mitra?<span> </span>
-            <Link className={style.linkToRegister} to="/register">
-                Daftar disini
-            </Link>
-          </p>
-        </form>
-      </div>
+            <div className="header-logo">
+              <img src={Logo} alt="logo" />
+            </div>
+          </div>
+          <div className="form-body">
+            <div className="body-title">Selamat datang!</div>
+            <div className="body-subtitle">
+              Masuk untuk mengelola informasi mitra anda mulai dari memeriksa
+              reservasi hingga mengelola ketersediaan!
+            </div>
+            <Form
+              className="body-form"
+              onSubmit={(event) => {
+                event.preventDefault();
+                history.replace(`/hotel/submission`);
+              }}
+            >
+              <Form.Floating className="mb-3">
+                <Form.Control
+                  id="floatingEmail"
+                  type="email"
+                  placeholder="name@example.com"
+                />
+                <label htmlFor="floatingEmail">Email</label>
+              </Form.Floating>
+              <Form.Floating className="mb-3">
+                <div className="icon-action">
+                  {reveal ? (
+                    <HiEyeOff
+                      className="icon"
+                      onClick={() => setReveal((value) => !value)}
+                    />
+                  ) : (
+                    <HiEye
+                      className="icon"
+                      onClick={() => setReveal((value) => !value)}
+                    />
+                  )}
+                </div>
+                <Form.Control
+                  id="floatingPassword"
+                  type={reveal ? "text" : "password"}
+                  placeholder="Password"
+                />
+                <label htmlFor="floatingPassword">Password</label>
+              </Form.Floating>
+              {/* <div className="text-forgot mb-3">
+              <small>Forgot password?</small>
+            </div> */}
+              <Button className="btn-login mb-4" size="lg" type="submit">
+                Login
+              </Button>
+              <div className="text-register">
+                Belum menjadi mitra? <Link to="/register">Daftar disini!</Link>
+              </div>
+            </Form>
+          </div>
+        </div>
+      </Container>
     </div>
   );
-}
+};
 
 export default Login;

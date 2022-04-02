@@ -1,11 +1,17 @@
-@import './styles/utilities/variables';
+@import "./styles/utilities/variables";
 @import "~bootstrap/scss/bootstrap";
 
-/* @font-face {
+@font-face {
   font-family: "Proxima";
-  src: url("../src/assets/fonts/proxima/Proxima-Nova-Light.otf") format("opentype"), url("../src/assets/fonts/proxima/FontsFree-Net-proxima_nova_reg-webfont.ttf") format("truetype"),
-    url("../src/assets/fonts/proxima/FontsFree-Net-pr2-medium.ttf") format("truetype"), url("../src/assets/fonts/proxima/proxima\ nova\ bold.ttf") format("truetype");
-} */
+  src: url("../src/assets/fonts/proxima/Proxima-Nova-Light.otf")
+      format("opentype"),
+    url("../src/assets/fonts/proxima/FontsFree-Net-proxima_nova_reg-webfont.ttf")
+      format("truetype"),
+    url("../src/assets/fonts/proxima/FontsFree-Net-pr2-medium.ttf")
+      format("truetype"),
+    url("../src/assets/fonts/proxima/proxima\ nova\ bold.ttf")
+      format("truetype");
+}
 
 @font-face {
   font-family: "Proxima";
@@ -37,5 +43,5 @@
 body {
   font-family: "Proxima", sans-serif !important;
   font-weight: normal;
-  color: $netral-500
+  color: $netral-500;
 }
