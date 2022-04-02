@@ -13,7 +13,7 @@ const Pengajuan = () => {
         <Card.Body>
           <span>
             Tim kami akan menghubungi Anda melalui email
-            (stefanusirgy2202@gmail.com) untuk informasi terbaru terkait proses
+            (ilhamsantosa@icloud.com) untuk informasi terbaru terkait proses
             pendaftaran Mitra Anda. Salam Hangat, Selamat Siang.
           </span>
           <div className="mt-3">

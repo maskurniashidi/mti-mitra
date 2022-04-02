@@ -109,7 +109,7 @@ const InformasiMitra = () => {
                 Alamat Email
               </Form.Label>
               <Form.Label column sm={8}>
-                stefanusirgy2202@gmail.com
+                ilhamsantosa@icloud.com
               </Form.Label>
             </Form.Group>
             <Form.Group as={Row} className="mb-1">

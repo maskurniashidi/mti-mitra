@@ -5,8 +5,7 @@ import "moment/locale/id";
 
 import InputSwitch from "../../../../../components/Form/Input/InputSwitch/InputSwitch";
 import StyledCheck from "../../../../../components/StyledCheck/StyledCheck";
-// import { Wrapper, Status } from "@googlemaps/react-wrapper";
-
+import Map from "../../../../../components/Map/Map";
 import ContactForm from "./components/ContactForm";
 
 const InformasiUmum = () => {
@@ -123,11 +122,10 @@ const InformasiUmum = () => {
               Alamat Mitra
             </Form.Label>
             <Col sm={8}>
-              {/* <Form.Group className="mb-3">
-                  <Form.Label>Location</Form.Label>
-                  <Wrapper apiKey={"YOUR_API_KEY"}>
-                  </Wrapper>
-                </Form.Group> */}
+              <Form.Group className="mb-3">
+                <Form.Label>Location</Form.Label>
+                <Map />
+              </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label>Alamat</Form.Label>
                 <Form.Control
