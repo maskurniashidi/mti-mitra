@@ -34,6 +34,15 @@
   font-weight: bold;
 }
 
+@keyframes slideUpFromDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 * {
   padding: 0;
   margin: 0;

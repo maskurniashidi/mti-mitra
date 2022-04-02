@@ -63,7 +63,12 @@ const Password = () => {
           />
           <label htmlFor="floatingRePassword">Konfirmasi ulang password</label>
         </Form.Floating>
-        <Button className="btn-register mb-4" size="lg" type="submit">
+        <Button
+          className="btn-register mb-4"
+          size="lg"
+          type="submit"
+          variant="primary"
+        >
           Selanjutnya
         </Button>
       </Form>

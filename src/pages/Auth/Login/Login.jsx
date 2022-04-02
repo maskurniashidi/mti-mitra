@@ -69,7 +69,12 @@ const Login = () => {
               {/* <div className="text-forgot mb-3">
               <small>Forgot password?</small>
             </div> */}
-              <Button className="btn-login mb-4" size="lg" type="submit">
+              <Button
+                className="btn-login mb-4"
+                size="lg"
+                type="submit"
+                variant="primary"
+              >
                 Login
               </Button>
               <div className="text-register">

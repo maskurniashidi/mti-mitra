@@ -28,7 +28,12 @@ const Email = () => {
           />
           <label htmlFor="floatingEmail">Email</label>
         </Form.Floating>
-        <Button className="btn-register mb-4" size="lg" type="submit">
+        <Button
+          className="btn-register mb-4"
+          size="lg"
+          type="submit"
+          variant="primary"
+        >
           Daftar
         </Button>
         <div className="text-register">
