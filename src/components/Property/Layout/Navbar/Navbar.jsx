@@ -25,7 +25,7 @@ const Navbar = () => {
               <div className="nav-avatar">HH</div>
               <div className="nav-profile">
                 <span className="property-name">Hotel Himalaya</span>
-                <span className="account">stefanusirgy2202@gmail.com</span>
+                <span className="account">ilhamsantosa@icloud.com</span>
               </div>
               <Dropdown.Toggle as="a" id="dropdown-basic">
                 <IoChevronDownOutline />

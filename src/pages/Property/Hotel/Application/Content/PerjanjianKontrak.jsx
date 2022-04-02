@@ -94,7 +94,7 @@ const PerjanjianKontrak = () => {
                   Nama Lengkap
                 </Form.Label>
                 <Form.Label column sm={8}>
-                  Stefanus Irgy Hananto
+                  Ahmad Ilham Santosa
                 </Form.Label>
               </Form.Group>
               <Form.Group as={Row} className="mb-1">
@@ -110,7 +110,7 @@ const PerjanjianKontrak = () => {
                   Alamat Email
                 </Form.Label>
                 <Form.Label column sm={8}>
-                  stefanusirgy2202@gmail.com
+                  ilhamsantosa@icloud.com
                 </Form.Label>
               </Form.Group>
               <Form.Group as={Row} className="mb-1">
