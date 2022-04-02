@@ -1,44 +1,56 @@
-//dependency
-import React from "react";
-import { Link } from "react-router-dom";
+/* eslint-disable eqeqeq */
+import React, { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
+import { useLocation } from "react-router-dom";
 
-//styling
-import style from "./register.module.css";
-
-//asset
-import LogoMti from "../../../assets/images/logo.png";
+import "./Register.scss";
+import { Email, Name, Password, Confirmation, Confirmed } from "./Component";
+import Logo from "../../../assets/images/logo.png";
+import FormHeader from "../../../assets/images/form-header.png";
 
 const Register = () => {
+  const { search } = useLocation();
+  const step = new URLSearchParams(search).get("step");
+  const [content, setContent] = useState();
+  const [showHeader, setShowHeader] = useState(true);
+
+  useEffect(() => {
+    if (step == null || step == 1) {
+      setContent(<Email />);
+    } else if (step == 2) {
+      setContent(<Name />);
+    } else if (step == 3) {
+      setContent(<Password />);
+    } else if (step == 4) {
+      setContent(<Confirmation />);
+      setShowHeader(false);
+    } else if (step == 5) {
+      setContent(<Confirmed />);
+      setShowHeader(false);
+    } else {
+      setContent(<Email />);
+    }
+  }, [step]);
 
   return (
-    <div className={style.register}>
-      <div className={style.registerContainer}>
-        <div className={style.registerHeader}></div>
-        <div className={style.registerContainer2}>
-          <div className={style.registerLogo}>
-            <img src={LogoMti} alt="logo mti" className={style.logo} />
+    <div className="register-wrapper">
+      <Container>
+        <div className="register-form">
+          <div className="form-header">
+            {showHeader && (
+              <div className="header-background">
+                <img src={FormHeader} alt="header" />
+              </div>
+            )}
+            <div className="header-logo">
+              <img src={Logo} alt="logo" />
+            </div>
           </div>
-          <div className={style.registerText}>
-            <div className={style.textTittle}>Buat akun baru</div>
-            <div className={style.textDescription}>Daftarkan hotel anda sebagai mitra dan kami akan membantu anda agar bisa terhubung ke Medical Tourism Indonesia!</div>
-          </div>
-          <form className={style.registerForm}>
-            <label className={style.registerLabel}>
-              <input type="email" className={style.registerInput} />
-              <span className={style.inputLabel}>Email</span>
-            </label>
-            <Link className={style.btnRegister} to="/register_Bussiness_Name">Register</Link>
-            <p className={style.loginRegister}>
-              Sudah menjadi mitra?<span> </span>
-              <Link className={style.linkToLogin} to="/login">
-                Masuk sekarang
-              </Link>
-            </p>
-          </form>
+          {content}
         </div>
-      </div>
+      </Container>
     </div>
   );
-}
+};
 
 export default Register;
