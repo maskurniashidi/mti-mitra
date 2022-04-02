@@ -31,6 +31,7 @@
           border-bottom-right-radius: 500px;
           height: fit-content;
           animation: 0.75s ease-out 0s 1 slideUpFromDown;
+
           img {
             flex-shrink: 1;
             min-width: 100%;
@@ -141,7 +142,6 @@
           .btn-login {
             width: 100%;
             font-size: 1rem;
-            background-color: $primary-500;
             border: 0;
           }
 
